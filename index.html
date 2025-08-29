@@ -75,6 +75,20 @@ var greenIcon = L.icon({
 });
 
 
+
+//(TOB - Red Text Colour)
+var style = document.createElement('style');
+style.innerHTML = `
+    .tob-text {
+        color: #d9022d;
+        font-weight: bold;
+    }
+`;
+document.head.appendChild(style);
+
+//'<div class="tob-text">(TOB)</div>' + '
+
+    
 //(PFL Text Colour)
 var style = document.createElement('style');
 style.innerHTML = `
@@ -114,7 +128,7 @@ document.head.appendChild(style);
 //Theft of Bicycle
 
 var tob1 = L.marker([1.3428, 103.87144], { icon: redIcon });
-var popup = tob1.bindPopup('Blk 208A Woodleigh Link, Bicycle Bay<br/><br/>TOB<br/><br/>Prone Timing: -').openPopup()
+var popup = tob1.bindPopup('Blk 208A Woodleigh Link, Bicycle Bay<br/>' + '<div class="tob-text">(TOB)</div>' + '<br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var tob2 = L.marker([1.350194, 103.874856], { icon: redIcon });
