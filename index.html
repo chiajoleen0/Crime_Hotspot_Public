@@ -58,24 +58,6 @@ var redIcon = L.icon({
     popupAnchor: [-1, -33],
 });
 
-//DMOP of Bicycle Marker (Blue)
-var blueIcon = L.icon({
-    iconUrl: 'img/blueicon.png',
-    iconSize: [35, 35],
-    iconAnchor: [22, 39],
-    popupAnchor: [-1, -33],
-});
-
-//Mischief to Bicycle Marker (Green)
-var greenIcon = L.icon({
-    iconUrl: 'img/greenicon.png',
-    iconSize: [35, 35],
-    iconAnchor: [22, 39],
-    popupAnchor: [-1, -33],
-});
-
-
-
 //(TOB - Red Text Colour)
 var style = document.createElement('style');
 style.innerHTML = `
@@ -89,6 +71,47 @@ document.head.appendChild(style);
 //'<div class="tob-text">(TOB)</div>' + '
 
     
+//DMOP of Bicycle Marker (Blue)
+var blueIcon = L.icon({
+    iconUrl: 'img/blueicon.png',
+    iconSize: [35, 35],
+    iconAnchor: [22, 39],
+    popupAnchor: [-1, -33],
+});
+
+//(DMOPB - Blue Text Colour)
+var style = document.createElement('style');
+style.innerHTML = `
+    .dmopb-text {
+        color: #2b60ff;
+        font-weight: bold;
+    }
+`;
+document.head.appendChild(style);
+
+//'<div class="dmopb-text">(DMOP of Bicycle)</div>' + '
+
+    
+//Mischief to Bicycle Marker (Green)
+var greenIcon = L.icon({
+    iconUrl: 'img/greenicon.png',
+    iconSize: [35, 35],
+    iconAnchor: [22, 39],
+    popupAnchor: [-1, -33],
+});
+
+//(MB - Green Text Colour)
+var style = document.createElement('style');
+style.innerHTML = `
+    .mb-text {
+        color: #00bd06;
+        font-weight: bold;
+    }
+`;
+document.head.appendChild(style);
+
+//'<div class="mb-text">(Mischief to Bicycle)</div>' + '
+
 //(PFL Text Colour)
 var style = document.createElement('style');
 style.innerHTML = `
@@ -128,63 +151,63 @@ document.head.appendChild(style);
 //Theft of Bicycle
 
 var tob1 = L.marker([1.3428, 103.87144], { icon: redIcon });
-var popup = tob1.bindPopup('Blk 208A Woodleigh Link, Bicycle Bay<br/>' + '<div class="tob-text">(TOB)</div>' + '<br/>Prone Timing: -').openPopup()
+var popup = tob1.bindPopup('<div class="tob-text">(TOB)</div>' + 'Blk 208A Woodleigh Link, Bicycle Bay<br/><br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var tob2 = L.marker([1.350194, 103.874856], { icon: redIcon });
-popup = tob2.bindPopup('Blk 416 Serangoon Central, Bicycle Bay<br/><br/>TOB<br/><br/>Prone Timing: -').openPopup()
+popup = tob2.bindPopup('<div class="tob-text">(TOB)</div>' + 'Blk 416 Serangoon Central, Bicycle Bay<br/><br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var tob3 = L.marker([1.33438, 103.86526], { icon: redIcon });
-popup = tob3.bindPopup('Blk 131 Potong Pasir Ave 1 outside #02-00<br/><br/>TOB<br/><br/>Prone Timing: -').openPopup()
+popup = tob3.bindPopup('<div class="tob-text">(TOB)</div>' + 'Blk 131 Potong Pasir Ave 1 outside #02-00<br/><br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var tob4 = L.marker([1.360193, 103.885356], { icon: redIcon });
-popup = tob4.bindPopup('Kovan MRT exit C<br/><br/>TOB<br/></br>Prone Timing: 9am to 11pm').openPopup()
+popup = tob4.bindPopup('<div class="tob-text">(TOB)</div>' + 'Kovan MRT exit C<br/></br>Prone Timing: 9am to 11pm').openPopup()
 popup.addTo(map);
 
 var tob5 = L.marker([1.337251, 103.862751], { icon: redIcon });
-popup = tob5.bindPopup('Blk 115 Potong Pasir Ave 1, Bicycle Bay<br/><br/>TOB<br/><br/>Prone Timing: -').openPopup()
+popup = tob5.bindPopup('<div class="tob-text">(TOB)</div>' + 'Blk 115 Potong Pasir Ave 1, Bicycle Bay<br/><br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var tob6 = L.marker([1.342274, 103.880384], { icon: redIcon });
-popup = tob6.bindPopup('Bartley MRT exit A<br/><br/>TOB<br/><br/>Prone Timing: 7.45am to 8.45pm').openPopup()
+popup = tob6.bindPopup('<div class="tob-text">(TOB)</div>' + 'Bartley MRT exit A<br/><br/>Prone Timing: 7.45am to 8.45pm').openPopup()
 popup.addTo(map);
 
 var tob7 = L.marker([1.339902, 103.8710609], { icon: redIcon });
-popup = tob7.bindPopup('Woodleigh MRT near Blk 201A<br/><br/>TOB<br/><br/> Prone Timing: 6.30pm to 10.30pm').openPopup()
+popup = tob7.bindPopup('<div class="tob-text">(TOB)</div>' + 'Woodleigh MRT near Blk 201A<br/><br/> Prone Timing: 6.30pm to 10.30pm').openPopup()
 popup.addTo(map);
 
 var tob8 = L.marker([1.3383504, 103.8708246], { icon: redIcon });
-popup = tob8.bindPopup('11 Bidadari Pk, Woodleigh Mall Bicycle Bay<br/><br/>TOB<br/><br/>Prone Timing: 10.20am to 10.50am').openPopup()
+popup = tob8.bindPopup('<div class="tob-text">(TOB)</div>' + '11 Bidadari Pk, Woodleigh Mall Bicycle Bay<br/><br/>Prone Timing: 10.20am to 10.50am').openPopup()
 popup.addTo(map);
 
 var tob9 = L.marker([1.3600417, 103.8853548], { icon: redIcon });
-popup = tob9.bindPopup('Kovan MRT exit C<br/><br/>TOB<br/><br/>Prone Timing: -').openPopup()
+popup = tob9.bindPopup('<div class="tob-text">(TOB)</div>' + 'Kovan MRT exit C<br/><br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var tob10 = L.marker([1.3316095,103.8690366], { icon: redIcon });
-popup = tob10.bindPopup('55 Upp Serangoon Rd, Potong Pasir MRT<br/><br/>TOB<br/><br/>Prone Timing: -').openPopup()
+popup = tob10.bindPopup('<div class="tob-text">(TOB)</div>' + '55 Upp Serangoon Rd, Potong Pasir MRT<br/><br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var tob11 = L.marker([1.3423409,103.8732112], { icon: redIcon });
-popup = tob11.bindPopup('Blk 212D Bidadari Pk Dr, Bicycle Bay<br/><br/>TOB<br/><br/>Prone Timing: 7.30pm to 6.30am').openPopup()
+popup = tob11.bindPopup('<div class="tob-text">(TOB)</div>' + 'Blk 212D Bidadari Pk Dr, Bicycle Bay<br/><br/>Prone Timing: 7.30pm to 6.30am').openPopup()
 popup.addTo(map);
 
 var tob12 = L.marker([1.3431755,103.8765725], { icon: redIcon });
-popup = tob12.bindPopup('Blk 215D Bidadari Pk Dr, Bicycle Bay<br/><br/>TOB<br/><br/>Prone Timing: 12am to 12.50pm').openPopup()
+popup = tob12.bindPopup('<div class="tob-text">(TOB)</div>' + 'Blk 215D Bidadari Pk Dr, Bicycle Bay<br/><br/>Prone Timing: 12am to 12.50pm').openPopup()
 popup.addTo(map);
 
 var tob47 = L.marker([1.3391359,103.8722558], { icon: redIcon });
-popup = tob47.bindPopup('Woodleigh Mall Bicycle Bay near to Bidadari CC<br/><br/>TOB<br/><br/>Prone Timing: -').openPopup()
+popup = tob47.bindPopup('<div class="tob-text">(TOB)</div>' + 'Woodleigh Mall Bicycle Bay near to Bidadari CC<br/><br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var tob48 = L.marker([1.3363375,103.8888912], { icon: redIcon });
-popup = tob48.bindPopup('18 Tai Seng St, green railings<br/><br/>TOB<br/><br/>Prone Timing: 6.30pm to 7am').openPopup()
+popup = tob48.bindPopup('<div class="tob-text">(TOB)</div>' + '18 Tai Seng St, green railings<br/><br/>Prone Timing: 6.30pm to 7am').openPopup()
 popup.addTo(map);
 
 var tob53 = L.marker([1.3411667,103.8725202], { icon: redIcon });
-popup = tob53.bindPopup('Blk 206A Woodleigh Link MSCP, bicycle bay<br/><br/>TOB<br/><br/>Prone Timing: 11pm to 9am').openPopup()
+popup = tob53.bindPopup('<div class="tob-text">(TOB)</div>' + 'Blk 206A Woodleigh Link MSCP, bicycle bay<br/><br/>Prone Timing: 11pm to 9am').openPopup()
 popup.addTo(map);
 
 //TOB Marker Grouping
@@ -194,19 +217,19 @@ tob12, tob47, tob48, tob53, ])
 //DMOP of Bicycle
 
 var dmopb13 = L.marker([1.3317078, 103.8674243], { icon: blueIcon });
-popup = dmopb13.bindPopup('Blk 146 Potong Pasir Ave 1, lvl 1 s/case<br/><br/>DMOP of bicycle<br/><br/>Prone Timing: 7am to 7.40am').openPopup()
+popup = dmopb13.bindPopup('<div class="dmopb-text">(DMOP of Bicycle)</div>' + 'Blk 146 Potong Pasir Ave 1, lvl 1 s/case<br/><br/>Prone Timing: 7am to 7.40am').openPopup()
 popup.addTo(map);
 
 var dmopb14 = L.marker([1.3354371, 103.8626641], { icon: blueIcon });
-popup = dmopb14.bindPopup('<div class="pfl-text">(PFL)</div>' + '<br/>F/20250103/7122<br/>Blk 118 Potong Pasir Ave 1, Bicycle Bay<br/>DMOP of bicycle<br/><br/>Giant brand bicycle ($100) last seen in-tact on 29/12/2024, was discovered missing on 30/12/2024 at 9am.<br/>Prone Timing: -').openPopup()
+popup = dmopb14.bindPopup('<div class="dmopb-text">(DMOP of Bicycle)</div>' + 'Blk 118 Potong Pasir Ave 1, Bicycle Bay<br/><br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var dmopb15 = L.marker([1.3524802, 103.878554], { icon: blueIcon });
-popup = dmopb15.bindPopup('<div class="pfl-text">(PFL)</div>' + '<br/>F/20250111/7056<br/>Blk 161 Hougang St 11, Bicycle Bay<br/>DMOP of bicycle<br/><br/>2 Decathalon Rock Rider brand bicycles ($184.90 total), last parked on 6/1/2025 at 9.30am, was discovered missing on 8/1/2025 at 8.40am.<br/>Prone Timing: -').openPopup()
+popup = dmopb15.bindPopup('<div class="dmopb-text">(DMOP of Bicycle)</div>' + 'Blk 161 Hougang St 11, Bicycle Bay<br/><br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var dmopb16 = L.marker([1.332373, 103.8661453], { icon: blueIcon });
-popup = dmopb16.bindPopup('<div class="pfl-text">(PFL)</div>' + '<br/>F/20250102/7085<br/>Blk 145 Potong Pasir Ave 2, Bicycle Bay<br/>DMOP of bicycle<br/><br/>Mangooese Crossway brand bicycle ($250) last seen in-tact on 1/12/2024, was discovered missing on 2/1/2025 at 3pm.<br/>Prone Timing: -').openPopup()
+popup = dmopb16.bindPopup('<div class="dmopb-text">(DMOP of Bicycle)</div>' + 'Blk 145 Potong Pasir Ave 2, Bicycle Bay<br/><br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var dmopb17 = L.marker([1.3481438, 103.8766175], { icon: blueIcon });
