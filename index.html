@@ -50,7 +50,7 @@ var onemap = L.tileLayer('https://www.onemap.gov.sg/maps/tiles/Default/{z}/{x}/{
 onemap.addTo(map);
 
 // Markers
-//Theft of Bicycle Marker (Red)
+//TOB Marker (Red)
 var redIcon = L.icon({
     iconUrl: 'img/redicon.png',
     iconSize: [35, 35],
@@ -112,46 +112,11 @@ document.head.appendChild(style);
 
 //'<div class="mb-text">(Mischief to Bicycle)</div>' + '
 
-//(PFL Text Colour)
-var style = document.createElement('style');
-style.innerHTML = `
-    .pfl-text {
-        color: #d9022d;
-        font-weight: bold;
-    }
-`;
-document.head.appendChild(style);
 
-//'<div class="pfl-text">(PFL)</div>' + '
-
-//(Pending Investigation Text Colour)
-var style = document.createElement('style');
-style.innerHTML = `
-    .pending-text {
-        color: #ed9302;
-        font-weight: bold;
-    }
-`;
-document.head.appendChild(style);
-
-//'<div class="pending-text">(Pending Investigations)</div>' + '
-
-//(Solved Text Colour)
-var style = document.createElement('style');
-style.innerHTML = `
-    .solved-text {
-        color: #02ed0e;
-        font-weight: bold;
-    }
-`;
-document.head.appendChild(style);
-
-//'<div class="solved-text">(Solved)</div>' + '
-
-//Theft of Bicycle
+//TOB
 
 var tob1 = L.marker([1.3428, 103.87144], { icon: redIcon });
-var popup = tob1.bindPopup('<div class="tob-text">(TOB)</div>' + 'Blk 208A Woodleigh Link, Bicycle Bay<br/><br/>Prone Timing: -').openPopup()
+var popup = tob1.bindPopup('<div class="tob-text">(TOB)</div>' + 'Blk 208A Woodleigh Link, Bicycle Bay<br/>Prone Timing: -').openPopup()
 popup.addTo(map);
 
 var tob2 = L.marker([1.350194, 103.874856], { icon: redIcon });
@@ -233,7 +198,7 @@ popup = dmopb16.bindPopup('<div class="dmopb-text">(DMOP of Bicycle)</div>' + 'B
 popup.addTo(map);
 
 var dmopb17 = L.marker([1.3481438, 103.8766175], { icon: blueIcon });
-popup = dmopb17.bindPopup('<div class="solved-text">(Solved)</div>' + '<br/>F/20250107/7113<br/>Blk 425 Serangoon Ave 1, Bicycle Bay<br/>DMOP of bicycle<br/><br/>Estella gold brand bicycle ($350) last seen in-tact on 7/1/2025 at 7am, was discovered missing at 5.40pm.<br/>Prone Timing: 7am to 5.40pm').openPopup()
+popup = dmopb17.bindPopup('<div class="dmopb-text">(DMOP of Bicycle)</div>' + 'Blk 425 Serangoon Ave 1, Bicycle Bay<br/><br/>Prone Timing: 7am to 5.40pm').openPopup()
 popup.addTo(map);
 
 var dmopb18 = L.marker([1.3360487, 103.8885494], { icon: blueIcon });
